@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2021.04.03 16:19:47.468,=C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021.04.03 16:20:12.686,C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\Çekiliş\Unit1.fmx=C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\Unit1.fmx</Transaction>
+    <Transaction>2021.04.03 16:20:12.686,C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\Çekiliş\Unit1.pas=C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021.04.03 16:20:19.979,C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\Çekiliş\Cekilis.dproj=C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2021.04.03 18:22:41.519,=C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\Çekiliş\Unit2.pas</Transaction>
+    <Transaction>2021.04.03 20:19:05.715,C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\Çekiliş\Draw.dproj=C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\Çekiliş\Cekilis.dproj</Transaction>
+  </Transactions>
+  <ActiveMobileDevice>   <NoProfile Android="52002f03fa57c4d9" Android64="wanheda"/>
+  </ActiveMobileDevice>
+</BorlandProject>
