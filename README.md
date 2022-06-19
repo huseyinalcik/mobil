@@ -1,1 +1,1 @@
-# mobil
+# geliştirdiğim basit mobil uygulamalar
