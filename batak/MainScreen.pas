@@ -26,6 +26,7 @@ type
     Label3: TLabel;
     ColorAnimation2: TColorAnimation;
     procedure Rectangle1Click(Sender: TObject);
+    procedure Rectangle2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -38,7 +39,7 @@ var
 implementation
 
 {$R *.fmx}
-uses GameScreen;
+uses GameScreen,DataScreen;
 
 procedure TForm1.Rectangle1Click(Sender: TObject);
 begin
@@ -51,6 +52,15 @@ begin
      HeaderFooterForm.Show;
 end;
 
+end;
+
+procedure TForm1.Rectangle2Click(Sender: TObject);
+begin
+  form2.Fdconnection1.Open();
+  form2.fdquery1.ExecSQL;
+  form2.fdquery3.open();
+  form2.fdquery2.Open();
+  form2.show;
 end;
 
 end.

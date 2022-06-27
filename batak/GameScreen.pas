@@ -6,7 +6,8 @@ uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Graphics, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.StdCtrls,
   FMX.Objects, FMX.Edit, FMX.Layouts, FMX.Controls.Presentation, FMX.ListBox,
-  FMX.Ani, FMX.Memo.Types, FMX.ScrollBox, FMX.Memo;
+  FMX.Ani, FMX.Memo.Types, FMX.ScrollBox, FMX.Memo, Data.Bind.Controls,
+  Fmx.Bind.Navigator;
 
 type
   THeaderFooterForm = class(TForm)
@@ -71,6 +72,7 @@ type
     procedure Timer2Timer(Sender: TObject);
     procedure Rectangle6Click(Sender: TObject);
     procedure Rectangle5Click(Sender: TObject);
+    procedure Rectangle3Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -84,7 +86,7 @@ var
 implementation
 
 {$R *.fmx}
-uses MainScreen;
+uses MainScreen,DataScreen;
  var
    sayac:integer =0;
    sayac1:integer=0;
@@ -191,6 +193,22 @@ begin
           end;
       end;
     end);
+end;
+
+procedure THeaderFooterForm.Rectangle3Click(Sender: TObject);
+begin
+try
+  form2.Fdconnection1.Open();
+  form2.Fdquery3.SQL.Text := 'INSERT INTO sonuc(takimA,skorA,takimB,skorB) VALUES (:takimA,:skorA,:takimB,:skorB)';
+  form2.Fdquery3.Params.ParamByName('takimA').Value := kazananA.text;
+  form2.Fdquery3.Params.ParamByName('skorA').Value := kazananPuanA.text;
+  form2.Fdquery3.Params.ParamByName('takimB').Value := kazananB.text;
+  form2.Fdquery3.Params.ParamByName('skorB').Value := kazananPuanB.text;
+  form2.Fdquery3.ExecSQL;
+  form2.Fdconnection1.Close();
+finally
+  form2.Fdquery3.Free;
+end;
 end;
 
 procedure THeaderFooterForm.Rectangle5Click(Sender: TObject);

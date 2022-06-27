@@ -4,10 +4,34 @@ interface
 
 uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
-  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs;
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Error, FireDAC.UI.Intf,
+  FireDAC.Phys.Intf, FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async,
+  FireDAC.Phys, FireDAC.Phys.SQLite, FireDAC.Phys.SQLiteDef,
+  FireDAC.Stan.ExprFuncs, FireDAC.Stan.Param, FireDAC.DatS, FireDAC.DApt.Intf,
+  FireDAC.DApt, FireDAC.Phys.SQLiteWrapper.Stat, FireDAC.FMXUI.Wait,
+  System.Rtti, System.Bindings.Outputs, Fmx.Bind.Editors, Data.Bind.EngExt,
+  Fmx.Bind.DBEngExt, Data.Bind.Components, Data.Bind.DBScope, FMX.Layouts,
+  FMX.ListBox, Data.DB, FireDAC.Comp.UI, FireDAC.Comp.DataSet,
+  FireDAC.Comp.Client, FMX.Grid.Style, FMX.Grid, FMX.Controls.Presentation,
+  FMX.ScrollBox, FMX.StdCtrls, Fmx.Bind.Grid, Data.Bind.Grid;
 
 type
   TForm2 = class(TForm)
+    FDPhysSQLiteDriverLink1: TFDPhysSQLiteDriverLink;
+    FDGUIxWaitCursor1: TFDGUIxWaitCursor;
+    DataSource1: TDataSource;
+    Button1: TButton;
+    StringGrid1: TStringGrid;
+    BindSourceDB1: TBindSourceDB;
+    FDConnection1: TFDConnection;
+    FDQuery1: TFDQuery;
+    FDQuery2: TFDQuery;
+    FDQuery3: TFDQuery;
+    BindSourceDB2: TBindSourceDB;
+    BindingsList1: TBindingsList;
+    LinkGridToDataSourceBindSourceDB2: TLinkGridToDataSource;
+    procedure Button1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -20,5 +44,14 @@ var
 implementation
 
 {$R *.fmx}
+
+procedure TForm2.Button1Click(Sender: TObject);
+begin
+  Fdconnection1.Open();
+  fdquery1.ExecSQL;
+  fdquery3.open();
+  fdquery2.Open();
+
+end;
 
 end.

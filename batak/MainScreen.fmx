@@ -343,6 +343,7 @@ object Form1: TForm1
         object Rectangle2: TRectangle
           Align = Client
           Cursor = crHandPoint
+          Enabled = False
           Fill.Color = xFF1F0D3D
           Margins.Left = 50.000000000000000000
           Margins.Top = 5.000000000000000000
@@ -354,6 +355,7 @@ object Form1: TForm1
           Stroke.Kind = None
           XRadius = 10.000000000000000000
           YRadius = 10.000000000000000000
+          OnClick = Rectangle2Click
           object Label3: TLabel
             Align = Client
             StyledSettings = []
