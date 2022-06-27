@@ -1,0 +1,99 @@
+object Form2: TForm2
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 567
+  ClientWidth = 329
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 3
+  object Button1: TButton
+    Position.X = 160.000000000000000000
+    Position.Y = 176.000000000000000000
+    TabOrder = 6
+    Text = 'Button1'
+    OnClick = Button1Click
+  end
+  object StringGrid1: TStringGrid
+    Align = Top
+    CanFocus = True
+    ClipChildren = True
+    Size.Width = 329.000000000000000000
+    Size.Height = 129.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.HorzAlign = Center
+    TabOrder = 7
+    RowCount = 0
+    Viewport.Width = 329.000000000000000000
+    Viewport.Height = 97.000000000000000000
+  end
+  object FDConnection1: TFDConnection
+    Params.Strings = (
+      'Database=sonuclardb'
+      'User_Name=root'
+      'DriverID=SQLite')
+    Connected = True
+    LoginPrompt = False
+    Left = 128
+    Top = 504
+  end
+  object FDQuery1: TFDQuery
+    Connection = FDConnection1
+    SQL.Strings = (
+      'CREATE TABLE IF NOT EXISTS sonuclardb ('
+      #9'id integer PRIMARY KEY,'
+      '   '#9'takimA text typeof(10) UNIQUE,'
+      #9'skorA text  UNIQUE,'
+      #9'takimB text UNIQUE,'
+      #9'skorB text UNIQUE'
+      ') ;'
+      ''
+      'INSERT INTO sonuclardb (takimA ,skorA,takimB,skorB ) '
+      'VALUES ('#39'huse'#39','#39'4'#39','#39'deneme'#39',5);'
+      '')
+    Left = 216
+    Top = 504
+  end
+  object FDPhysSQLiteDriverLink1: TFDPhysSQLiteDriverLink
+    Left = 120
+    Top = 328
+  end
+  object FDGUIxWaitCursor1: TFDGUIxWaitCursor
+    Provider = 'FMX'
+    Left = 296
+    Top = 328
+  end
+  object FDQuery2: TFDQuery
+    Connection = FDConnection1
+    SQL.Strings = (
+      ''
+      ''
+      'select * from sonuclardb')
+    Left = 280
+    Top = 504
+  end
+  object DataSource1: TDataSource
+    DataSet = FDQuery2
+    Left = 184
+    Top = 424
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = FDQuery2
+    ScopeMappings = <>
+    Left = 152
+    Top = 272
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 12
+    Top = 149
+    object LinkGridToDataSourceBindSourceDB1: TLinkGridToDataSource
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      GridControl = StringGrid1
+      Columns = <>
+    end
+  end
+end

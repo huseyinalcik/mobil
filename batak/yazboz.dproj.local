@@ -1,8 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
-  <ActiveMobileDevice>   <NoProfile iOSSimulator="iPhone5" Android=""/>
-  </ActiveMobileDevice>
-  <Transactions>
-    <Transaction>2022.06.18 20:34:05.832,C:\Users\Lexa\Documents\Embarcadero\Studio\Projects\batak\yazboz.dproj=C:\Users\Lexa\Documents\Embarcadero\Studio\Projects\batak\HeaderFooterApplication.dproj</Transaction>
+	<ActiveMobileDevice>
+		<NoProfile iOSSimulator="iPhone5" Android=""/>
+	</ActiveMobileDevice>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.347,=C:\Users\huseyin.alcik\Desktop\web\mobil\batak\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.969,C:\Users\huseyin.alcik\Desktop\web\mobil\batak\Unit1.pas=C:\Users\huseyin.alcik\Desktop\web\mobil\batak\MainScreen.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.976,C:\Users\huseyin.alcik\Desktop\web\mobil\batak\HeaderFooterTemplate.pas=C:\Users\huseyin.alcik\Desktop\web\mobil\batak\GameScreen.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.976,C:\Users\huseyin.alcik\Desktop\web\mobil\batak\HeaderFooterTemplate.fmx=C:\Users\huseyin.alcik\Desktop\web\mobil\batak\GameScreen.fmx</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.969,C:\Users\huseyin.alcik\Desktop\web\mobil\batak\Unit1.fmx=C:\Users\huseyin.alcik\Desktop\web\mobil\batak\MainScreen.fmx</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.832,C:\Users\Lexa\Documents\Embarcadero\Studio\Projects\batak\yazboz.dproj=C:\Users\Lexa\Documents\Embarcadero\Studio\Projects\batak\HeaderFooterApplication.dproj</Transaction>
   </Transactions>
 </BorlandProject>
